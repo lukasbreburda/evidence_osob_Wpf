@@ -35,6 +35,7 @@
             <ComboBoxItem x:Name="c2" IsSelected="False">Žena</ComboBoxItem>
         </ComboBox>
         <Label x:Name="er" Content="Chybné rodné číslo !!" Foreground="red" FontSize="18" HorizontalAlignment="Left" Margin="152,15,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="date" Content="" Foreground="Gray" FontSize="8" HorizontalAlignment="Left" Margin="406,287,0,0" VerticalAlignment="Top" Width="102"/>
 
     </Grid>
 

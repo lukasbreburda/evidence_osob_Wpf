@@ -102,6 +102,7 @@ namespace evidence_osob_Wpf
             del.Visibility = Visibility.Hidden;
             back.Visibility = Visibility.Hidden;
             er.Visibility = Visibility.Hidden;
+            date.Visibility = Visibility.Hidden;
         }
 
         private void news_Click(object sender, RoutedEventArgs e)
@@ -122,6 +123,7 @@ namespace evidence_osob_Wpf
                     {
                         item.pohlavi = 2;
                     }
+                    item.time = DateTime.Now.ToString();
 
                     Data.SaveItemAsync(item);
                     itemsFromDb.Add(item);
@@ -154,6 +156,7 @@ namespace evidence_osob_Wpf
                 t2.Text = todoItem.prijmeni;
                 t3.Text = todoItem.r_num;
                 t4.Text = todoItem.r_num2;
+                date.Content = todoItem.time;
               if(todoItem.pohlavi == 1)
                 {
                     c1.IsSelected = true;
@@ -179,6 +182,8 @@ namespace evidence_osob_Wpf
             edit.Visibility = Visibility.Visible;
             del.Visibility = Visibility.Visible;
             back.Visibility = Visibility.Visible;
+            date.Visibility = Visibility.Visible;
+
         }
 
         private void edit_click(object sender, RoutedEventArgs e)
@@ -201,6 +206,7 @@ namespace evidence_osob_Wpf
                     {
                         item.pohlavi = 2;
                     }
+                    item.time = DateTime.Now.ToString();
 
                     itemsFromDb.RemoveAt(g);
                     Data.SaveItemAsync(item);
@@ -237,6 +243,7 @@ namespace evidence_osob_Wpf
             t2.Text = "";
             t3.Text = "";
             t4.Text = "";
+            
         }
 
         private void back_click(object sender, RoutedEventArgs e)
@@ -249,7 +256,9 @@ namespace evidence_osob_Wpf
             t1.Text = "";
             t2.Text = "";
             t3.Text = "";
-            t4.Text = "";            
+            t4.Text = "";
+
+            int p;       
         }
 
         private void pre(object sender, TextCompositionEventArgs e)

@@ -16,6 +16,7 @@ namespace evidence_osob_Wpf
         public string r_num { get; set; }
         public string r_num2 { get; set; }
         public int pohlavi { get; set; }
+        public string time { get; set; }
         
         public Person()
         {
